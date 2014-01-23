@@ -21,6 +21,7 @@ Steps for sorting an array using merge sort
 
 ### Time and space constraints
 Time ![Time constraint for merge sort][eq/merge/time]
+Space ![Time constraint for merge sort][eq/merge/space]
 
 # References
 Implementation and analysis will be refering to the material used in 
@@ -31,3 +32,4 @@ Juho Hautala &lt;juho.hautala@helsinki.fi&gt;
 
 [wiki/dac]: http://en.wikipedia.org/wiki/Divide_and_conquer_algorithm "wiki/Divide and conquer algorithm"
 [eq/merge/time]: http://latex.codecogs.com/png.latex?O%28nlog%28n%29%29 "Time constraint for Merge sort"
+[eq/merge/space]: http://latex.codecogs.com/png.latex?O(n) "Time constraint for Merge sort"
