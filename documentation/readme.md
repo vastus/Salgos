@@ -21,6 +21,7 @@ Steps for sorting an array using merge sort
 
 ### Time and space constraints
 Time ![Time constraint for merge sort][eq/merge/time]
+
 Space ![Time constraint for merge sort][eq/merge/space]
 
 # References
