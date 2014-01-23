@@ -1,7 +1,15 @@
 package salgos;
 
+/**
+ * Class for merge sort.
+ * @author Juho Hautala
+ */
 public class Merge {
 
+    /**
+     * Sorts the given array using merge sort.
+     * @param ary array to be sorted
+     */
     public static void sort(int[] ary) {
         // Sorted if less than 2 elements.
         if (ary.length < 2) return;
