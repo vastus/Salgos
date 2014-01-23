@@ -30,4 +30,4 @@ Implementation and analysis will be refering to the material used in
 Juho Hautala &lt;juho.hautala@helsinki.fi&gt;
 
 [wiki/dac]: http://en.wikipedia.org/wiki/Divide_and_conquer_algorithm "wiki/Divide and conquer algorithm"
-[eq/merge/time]: http://latex.codecogs.com/svg.download?O%28nlog%28n%29%29 "Time constraint for Merge sort"
+[eq/merge/time]: http://latex.codecogs.com/png.download?O%28nlog%28n%29%29 "Time constraint for Merge sort"
