@@ -13,7 +13,7 @@ code that has been provided in the material that this work will rely on.
 ## Merge sort
 Merge sort is a good example of a [divide and conquer][wiki/dac] algorithm.
 
-Steps for sorting an array using merge sort
+Steps for sorting an array using merge sort:
 
 1. Divide - split the array in half (creating sub-arrays)
 2. Recur - call sort recursively until array length is less than two
@@ -22,15 +22,42 @@ Steps for sorting an array using merge sort
 ### Time and space constraints
 Time ![Time constraint for merge sort][eq/merge/time]
 
+Space ![Space constraint for merge sort][eq/merge/space]
+
+## Heap sort
+Heap sort is an inplace sorting algorithm thus making its time constraint
+constant (which is useful for large arrays). It's quite an efficient sorting
+algorithm that can sort n items in O(nlog(n)) time. Heap sort is not a stable 
+sorting algorithm.
+
+The idea of heap sort is as follows:
+
+1. Build (max) heap - heapify the given array to be sorted from last parent to root
+2. Delete max item - swap the first and last item, decrease heap size, heapify root
+3. Repeat step 2. until root item
+
+### Time and space constraints
+Time ![Time constraint for heap sort][eq/merge/time]
+
+Space ![Space constraint for heap sort][eq/heap/space]
+
+## Quick sort
+
+
+### Time and space constraints
+Time ![Time constraint for merge sort][eq/merge/time]
+
 Space ![Time constraint for merge sort][eq/merge/space]
 
 # References
-Implementation and analysis will be refering to the material used in 
+Implementation and analysis will be refering to the material used in
 'Tietorakenteet ja Algoritmit' -course held by Helsingin yliopisto IT Dep.
 
 
 Juho Hautala &lt;juho.hautala@helsinki.fi&gt;
 
 [wiki/dac]: http://en.wikipedia.org/wiki/Divide_and_conquer_algorithm "wiki/Divide and conquer algorithm"
-[eq/merge/time]: http://latex.codecogs.com/png.latex?O%28nlog%28n%29%29 "Time constraint for Merge sort"
-[eq/merge/space]: http://latex.codecogs.com/png.latex?O(n) "Time constraint for Merge sort"
+[eq/merge/time]: http://latex.codecogs.com/png.latex?O%28nlog%28n%29%29 "Time constraint is linear logarithmic"
+[eq/merge/space]: http://latex.codecogs.com/png.latex?O(n) "Space constraint is linear."
+[eq/heap/space]: http://latex.codecogs.com/png.latex?O(1) "Space constraint is constant."
+
