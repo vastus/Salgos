@@ -12,6 +12,7 @@ code that has been provided in the material that this work will rely on.
 
 ## Merge sort
 Merge sort is a good example of a [divide and conquer][wiki/dac] algorithm.
+It is a good example of a basic comparison sort.
 
 Steps for sorting an array using merge sort:
 
@@ -28,7 +29,7 @@ Space ![Space constraint for merge sort][eq/merge/space]
 Heap sort is an inplace sorting algorithm thus making its time constraint
 constant (which is useful for large arrays). It's quite an efficient sorting
 algorithm that can sort n items in O(nlog(n)) time. Heap sort is not a stable 
-sorting algorithm.
+sorting algorithm nor is it a comparing one.
 
 The idea of heap sort is as follows:
 
@@ -42,7 +43,14 @@ Time ![Time constraint for heap sort][eq/merge/time]
 Space ![Space constraint for heap sort][eq/heap/space]
 
 ## Quick sort
+Continuing the divide and conquer paradigm quick sort is also implemented in this way.
+Quick sort is an in-place comparison sorting algorithm which takes no extra space and
+can sort in linear logarithmic time on average, but worst case time constraint is
+O(n<sup>2</sup>).
 
+1. Divide - select (specified item) pivot
+2. Recur - recursively sort given array
+3. Conquer - put items back into given array to be sorted
 
 ### Time and space constraints
 Time ![Time constraint for merge sort][eq/merge/time]
