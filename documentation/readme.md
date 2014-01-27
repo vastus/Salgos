@@ -53,9 +53,9 @@ O(n<sup>2</sup>).
 3. Conquer - put items back into given array to be sorted
 
 ### Time and space constraints
-Time ![Time constraint for merge sort][eq/merge/time]
+Time ![Time constraint for merge sort][eq/quick/time]
 
-Space ![Time constraint for merge sort][eq/merge/space]
+Space ![Space constraint for quick sort][eq/heap/space]
 
 # References
 Implementation and analysis will be refering to the material used in
@@ -68,4 +68,6 @@ Juho Hautala &lt;juho.hautala@helsinki.fi&gt;
 [eq/merge/time]: http://latex.codecogs.com/png.latex?O%28nlog%28n%29%29 "Time constraint is linear logarithmic"
 [eq/merge/space]: http://latex.codecogs.com/png.latex?O(n) "Space constraint is linear."
 [eq/heap/space]: http://latex.codecogs.com/png.latex?O(1) "Space constraint is constant."
+[eq/quick/time]: http://latex.codecogs.com/png.latex?O(1) "Space constraint is constant."
+[eq/quick/space]: http://latex.codecogs.com/png.latex?O(n^2) "Space constraint is constant."
 
