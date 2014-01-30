@@ -12,7 +12,6 @@ public class Heap {
         for (int i = 1; i < a.length; i++) {
             swap(a, 0, a.length - i);
             heapify(a, a.length - i, 0);
-            //System.out.println(len-i);
         }
     }
 
@@ -27,7 +26,6 @@ public class Heap {
  
         int l = (2 * i + 1);
         int r = l + 1;
-        //int len = a.length;
         int greater;
 
         if (r < len) { // We have both children.
