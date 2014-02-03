@@ -1,9 +1,10 @@
 package salgos;
 
-import java.util.Arrays;
 import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
+import static salgos.TestHelpers.*;
 
 /**
  * Test class for Merge.
@@ -186,14 +187,6 @@ public class MergeTest {
         int[] expected = {55, 77, 99, 11};
         Merge.merge(ary, first, last);
         assertArrayEquals(expected, ary);
-    }
- 
-    // Helpers.
-    private boolean isAscending(int[] ary) {
-        for (int i = 0; i < (ary.length - 1); i++)
-            if (ary[i] > ary[(i + 1)])
-                return false;
-        return true;
     }
     
 }
