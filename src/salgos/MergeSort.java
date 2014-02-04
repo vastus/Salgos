@@ -1,7 +1,7 @@
 package salgos;
 
 /**
- * Class for merge sort.
+ * Class for Merge sort.
  * @author Juho Hautala
  */
 public class MergeSort {
