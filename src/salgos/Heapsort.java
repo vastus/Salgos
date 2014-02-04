@@ -3,7 +3,7 @@ package salgos;
 import static utils.Helpers.*;
 
 /**
- * Class for heap sort.
+ * Class for Heapsort.
  * @author Juho Hautala
  */
 public class Heapsort {
