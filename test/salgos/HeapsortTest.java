@@ -78,26 +78,6 @@ public class HeapsortTest {
     }
 
     @Test
-    public void swapShouldSwapElementsInGivenAryAtGivenIndices() {
-        int ary[] = {99, 77, 44, 11, 66};
-        int expected[] = {11, 44, 77, 66, 99};
-        Heapsort.swap(ary, 0, 3); // -> {11, 77, 44, 99, 66}
-        Heapsort.swap(ary, 1, 2); // -> {11, 44, 77, 99, 66}
-        Heapsort.swap(ary, 3, 4); // -> {11, 44, 77, 66, 99}
-        assertArrayEquals(expected, ary);
-    }
-
-    @Test
-    public void swapShouldSwapElementsWhenGivenIndicesInDifferentOrder() {
-        int ary[] = {99, 77, 44, 11, 66};
-        int expected[] = {11, 44, 77, 66, 99};
-        Heapsort.swap(ary, 3, 0); // -> {11, 77, 44, 99, 66}
-        Heapsort.swap(ary, 2, 1); // -> {11, 44, 77, 99, 66}
-        Heapsort.swap(ary, 4, 3); // -> {11, 44, 77, 66, 99}
-        assertArrayEquals(expected, ary);
-    }
-
-    @Test
     public void heapifyShouldSwapGreaterToGivenIndex() {
         int ary[] = {0, 4, 5, 3, 1, 2};
         Heapsort.heapify(ary, ary.length, 0);

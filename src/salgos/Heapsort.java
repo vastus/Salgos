@@ -1,5 +1,7 @@
 package salgos;
 
+import static utils.Helpers.*;
+
 /**
  * Class for heap sort.
  * @author Juho Hautala
@@ -99,18 +101,6 @@ public class Heapsort {
             return child;
         
         return -1;
-    }
- 
-    /**
-     * Swaps given array's elements from given indices.
-     * @param ary array whose elements to be swapped
-     * @param i first element's index
-     * @param j second element's index
-     */
-    public static void swap(int ary[], int i, int j) {
-        int temp = ary[i];
-        ary[i] = ary[j];
-        ary[j] = temp;
     }
  
 }
