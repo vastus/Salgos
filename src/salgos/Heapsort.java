@@ -4,7 +4,7 @@ package salgos;
  * Class for heap sort.
  * @author Juho Hautala
  */
-public class Heap {
+public class Heapsort {
  
     /**
      * Sorts the given array.
