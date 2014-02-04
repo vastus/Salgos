@@ -4,7 +4,7 @@ package salgos;
  * Class for merge sort.
  * @author Juho Hautala
  */
-public class Merge {
+public class MergeSort {
 
     /**
      * Sorts the given array using merge sort.
