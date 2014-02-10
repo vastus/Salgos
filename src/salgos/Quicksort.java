@@ -12,7 +12,7 @@ public class Quicksort {
      * Sorts given array with quicksort.
      * @param ary array to be sorted
      */
-    public static void sort(int a[]) {
+    public static void sort(Comparable a[]) {
         sort(a, 0, (a.length - 1));
     }
 
@@ -22,7 +22,7 @@ public class Quicksort {
      * @param left left index
      * @param right right index
      */
-    private static void sort(int a[], int left, int right) { 
+    private static void sort(Comparable a[], int left, int right) { 
         if (right <= left) return;
         int j = partition(a, left, right);
         sort(a, left, j-1);
@@ -37,14 +37,17 @@ public class Quicksort {
      * @return index where elements to its left are LTE and
      * elements to its right are GTE
      */
-    private static int partition(int a[], int left, int right) {
-        int i = left, j = right + 1, pivot = a[left];
+    private static int partition(Comparable a[], int left, int right) {
+        int i = left, j = right + 1;
+        Comparable pivot = a[left];
 
         while (true) {
-            while (a[++i] < pivot)
+            //while (a[++i] < pivot)
+            while (a[++i].compareTo(pivot) < 0)
                 if (i == right) break;
 
-            while (pivot < a[--j])
+            //while (pivot < a[--j])
+            while (pivot.compareTo(a[--j]) < 0)
                 if (j == left) break;
 
             if (i >= j) break;
