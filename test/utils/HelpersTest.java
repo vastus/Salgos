@@ -29,4 +29,14 @@ public class HelpersTest {
         assertArrayEquals(expected, ary);
     }
 
+    @Test
+    public void swapShouldSwapElementsWhenGivenIndicesInDifferentOrderII() {
+        Integer ary[] = {99, 77, 44, 11, 66};
+        Integer expected[] = {11, 44, 77, 66, 99};
+        Helpers.swap(ary, 3, 0); // -> {11, 77, 44, 99, 66}
+        Helpers.swap(ary, 2, 1); // -> {11, 44, 77, 99, 66}
+        Helpers.swap(ary, 4, 3); // -> {11, 44, 77, 66, 99}
+        assertArrayEquals(expected, ary);
+    }
+
 }
