@@ -3,6 +3,7 @@ package salgos;
 public class TestHelpers {
  
     /**
+     * This is just a helper method for running some of the tests.
      * Checks that given array is sorted in ascending order.
      * @param ary array to be checked
      * @return true if sorted in ascending order, false otherwise
