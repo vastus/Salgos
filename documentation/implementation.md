@@ -19,7 +19,7 @@ heap, and continues until the heap has only one element left in it.
 
 ### Pseudo code
 
-```
+```python
 def sort(Array a):
   buildheap(a)
   for i in range(1, a.length):
@@ -28,13 +28,13 @@ def sort(Array a):
 ```
 
 
-```
+```python
 def buildheap(Array a):
   for i in range(parent(a.length - 1), -1, step=-1):
     heapify(a, a.length, i)
 ```
 
-```
+```python
 def heapify(Array a, Integer len, Integer i):
   if i < 0: return
 
