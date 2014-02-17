@@ -30,6 +30,7 @@ Time ![Time constraint for merge sort][eq/time/nlogn]
 Space ![Space constraint for merge sort][eq/space/n]
 
 ## Heap sort
+
 Heap sort is an inplace sorting algorithm thus making its time constraint
 constant (which is useful for large arrays). It's quite an efficient sorting
 algorithm that can sort n items in ```O(n log n)``` time. Heap sort is not a stable 
@@ -42,11 +43,13 @@ The idea of heap sort is as follows:
 3. Repeat step 2. until root item
 
 ### Time and space constraints
+
 Time ![Time constraint for heap sort][eq/time/nlogn]
 
 Space ![Space constraint for heap sort][eq/space/1]
 
 ## Quick sort
+
 Continuing the divide and conquer paradigm quick sort is also implemented in this way.
 Quick sort is an in-place comparison sorting algorithm which takes no extra space and
 can sort in linear logarithmic time on average, but worst case time constraint is
@@ -57,14 +60,16 @@ can sort in linear logarithmic time on average, but worst case time constraint i
 3. Conquer - put items back into given array to be sorted
 
 ### Time and space constraints
+
 Time ![Time constraint for quick sort][eq/time/n2]
 
 Space ![Space constraint for quick sort][eq/space/n]
 
+
 # References
+
 Implementation and analysis will be refering to the material used in
 'Tietorakenteet ja Algoritmit' -course held by Helsingin yliopisto IT Dep.
-
 
 Juho Hautala &lt;juho.hautala@helsinki.fi&gt;
 
