@@ -20,7 +20,7 @@ heap, and continues until the heap has only one element left in it.
 ### Pseudo code
 
 ```python
-def sort(Array a):
+def heapsort(Array a):
   buildheap(a)
   for i in range(1, a.length):
     swap(a, 0, a.length - i)
@@ -56,4 +56,11 @@ def heapify(Array a, Integer len, Integer i):
 def parent(Integer child):
   return (child / 2) + (child % 2) - 1;
 ```
+
+### Analysis
+
+As we can see from the pseudo code heapsort builds the heap which takes
+O(n log n) time and then calls swap O(1) and heapify O(log n) n - 1 times,
+where n is the number of elements in the given array to be sorted. Thus given
+our time constraint for heapsort to O(n log n) + O(n log n) = O(n log n).
 
