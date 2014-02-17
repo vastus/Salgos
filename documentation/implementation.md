@@ -52,7 +52,7 @@ def heapify(Array a, Integer len, Integer i):
     swap(a, i, l)
 ```
 
-```
+```python
 def parent(Integer child):
   return (child / 2) + (child % 2) - 1;
 ```
