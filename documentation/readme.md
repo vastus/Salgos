@@ -50,7 +50,7 @@ Space ![Space constraint for heap sort][eq/space/1]
 Continuing the divide and conquer paradigm quick sort is also implemented in this way.
 Quick sort is an in-place comparison sorting algorithm which takes no extra space and
 can sort in linear logarithmic time on average, but worst case time constraint is
-```O(n<sup>2</sup>)```.
+<code>O(n<sup>2</sup>)</code>.
 
 1. Divide - select (specified item) pivot
 2. Recur - recursively sort given array
