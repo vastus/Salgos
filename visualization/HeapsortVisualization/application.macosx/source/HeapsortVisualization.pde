@@ -5,36 +5,23 @@ import java.util.Random;
 import controlP5.*;
 
 // Timer
-private int interval = 250;
-private int lastRecordedTime = 0;
+int interval = 250;
+int lastRecordedTime = 0;
 
 private Comparable poles[];
 private List<Comparable[]> steps;
 private ControlP5 cp5;
 
-// Stay still from the get go
-private boolean draw = false;
-
-// No. of poles
-private int numPoles;
-
-private final int poleWidth = 10;
-
-private int swaps = 0;
-
-// Window padding [up, right, down, left]
-static final int padding[] = {15, 15, 20, 15};
+boolean draw = false;
 
 void setup() {
-  // Window size.
-  // Prefer 16/10 ratio.
-  size(960, 600);
+  // Processing
+  size(800, 500);
 
   // Instance vars
   this.cp5 = new ControlP5(this);
-  //this.poles = randomPoles(19);
-  this.poles = initPoles(width);
-
+  this.poles = randomPoles(19);
+  
   // Controls
   addComponents(cp5);
 }
@@ -43,8 +30,6 @@ void draw() {
   if (draw && millis() - lastRecordedTime > interval) {
     this.poles = nextStep();
     background(29);
-    swaps += 1;
-    println(swaps);
     drawPoles(poles);
     lastRecordedTime = millis();
   }
@@ -56,46 +41,17 @@ void draw() {
   
 }
 
-/**
- * Initialize poles by width.
- * @param w window with
- * return array of poles that fit to window width
- */
-Pole[] initPoles(int w) {
-  //w = w - padding[1] - padding[3];
-  int n = numPoles(w); //w / (poleWidth + 10);
-  println(String.format("width: %d, w: %d, n: %d", width, w, n));
-  return randomPoles(n);
-}
-
-int numPoles(int w) {
-  w = w - padding[1] - padding[3];
-  return w / (poleWidth + 10);
-}
-
-Pole[] randomPoles(int n) {
-  Pole p[] = new Pole[n];
-  for (int i = 0; i < n; i++) {
-    p[i] = new Pole(i, (new Random().nextInt(n) + 1), cp5);
-  }
-
-  return p;
-}
-
 void addComponents(ControlP5 cp5) {
   cp5.addBang("randomizePoles")
-     .setPosition(padding[3], padding[0])
+     .setPosition(15, 15)
      .setCaptionLabel("Randomize")
      .setSize(80, 50);
   cp5.addBang("hSort")
-     .setPosition(padding[3] + 100, padding[0])
+     .setPosition(115, 15)
      .setCaptionLabel("Heap sort")
      .setSize(80, 50);
-  cp5.addTextlabel("LABEL")
-     .setText("SWAPS")
-     .setPosition(padding[3] + 195, padding[0]);
   cp5.addKnob("interval")
-     .setPosition(width - padding[1] - 65, padding[0])
+     .setPosition(width - 80, 15)
      .setRadius(30)
      .setRange(100, 500)
      .setNumberOfTickMarks(8)
@@ -114,21 +70,25 @@ Comparable[] nextStep() {
 }
 
 void randomizePoles() {
-  //this.poles = initPoles(width);
-  
   for (Comparable pole : poles) {
     Pole p = (Pole) pole;
-    p.randomizeValue(numPoles(width));
+    p.randomizeValue(19);
   }
-  
 }
 
 void hSort() {
-  if (draw) { draw = false; return; }
   this.steps = new ArrayList<Comparable[]>();
   heapSort(poles);
   draw = true;
-  swaps = 0;
+}
+
+Pole[] randomPoles(int n) {
+  Pole p[] = new Pole[n];
+  for (int i = 0; i < n; i++) {
+    p[i] = new Pole(i, (new Random().nextInt(n) + 1), cp5);
+  }
+
+  return p;
 }
 
 static void drawPoles(Comparable[] poles) {
