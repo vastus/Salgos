@@ -34,4 +34,25 @@ public class BubbleSort {
         }
     }
 
+    /**
+     * Sort the given array using bubble sort.
+     * @param ary array to be sorted
+     */
+    public static void sort(Comparable ary[]) {
+        // Loop thru only once if ary
+        // already in ascending sorted order.
+        sorting = true;
+        while (sorting) {
+            sorting = false;
+            for (int i = 1; i < ary.length; i++) {
+                if (ary[i].compareTo(ary[(i - 1)]) < 0) {
+                    // Swap needs to be done.
+                    swap(ary, (i - 1), i);
+                    // Continue sorting.
+                    sorting = true;
+                }
+            }
+        }
+    }
+
 }
