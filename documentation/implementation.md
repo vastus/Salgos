@@ -79,6 +79,7 @@ into one by taking the element which is the lowest of the two arrays.
 An example demonstration of merge sort applied to <code>[5, 1, 7]</code>:
 
 <code>
+<pre>
 [5, 7, 1]  # Divide.
 
 [5] [7, 1] # Here 5 is sorted. Divide [7, 1]
@@ -90,6 +91,7 @@ An example demonstration of merge sort applied to <code>[5, 1, 7]</code>:
 [5] [1, 7] # Merge by lowest.
 
 [1, 5, 7]  # Sorted.
+</pre>
 </code>
 
 ### Pseudo code
