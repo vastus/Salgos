@@ -153,3 +153,58 @@ sub-arrays of the array to be sorted recursively our worst case space
 complexity is <code>O(n)</code> where n is the number of elements to be sorted
 in the given array.
 
+
+
+## Quicksort
+
+Quicksort is also implemented using the divide and conquer design paradigm.
+It differs from merge sort that we use a pivot which decides our merging from
+element to another.
+
+### Pseudo code
+
+```python
+def sort(Array a):
+  sort(a, 0, (a.length - 1))
+```
+
+```python
+def sort(Array a, Integer left, Integer right):
+  if right <= left: return
+  Integer j = partition(a, left, right)
+  sort(a, left, j - 1)
+  sort(a, j + 1, right)
+```
+
+```python
+def partition(Array a, Integer left, Integer right):
+  Integer i = left, j = right + 1
+  Element pivot = a[left]
+
+  while true:
+    while a[++i] < pivot:
+      if i == right: break
+
+    while pivot < a[--j]:
+      if j == left: break
+
+    if i >= j:
+      break
+    swap(a, i, j)
+
+  swap(a, left, j)
+  return j
+```
+
+### Analysis
+
+The pseudo code illustrates that the time constraint for partition is linear
+time <code>O(n)</code>. The recursive sort function sorts given array by its
+pivot, thus giving our average time constraint <code>O(n log n)</code>.
+Quicksort is usually faster than heapsort and merge sort.
+
+If the given array to be sorted is already in sorted order and our pivot
+element is chosen as the left most element when we do the partition the time
+constraint for quicksort is <code>O(n<sup>2</sup>). This is why some
+implementations shuffle the array before sorting.
+
