@@ -10,3 +10,8 @@ This project is going to focus on (at least) the following sorting algorithms
 * Merge sort
 * Quick sort
 
+## Documentation
+
+Read about implementation and testing in the
+[documentation](https://github.com/vastus/Salgos/tree/master/documentation).
+
