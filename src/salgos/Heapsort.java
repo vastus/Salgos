@@ -22,11 +22,35 @@ public class Heapsort {
     }
 
     /**
+     * Sorts the given array.
+     * @param a array to be sorted
+     */
+    public static void sort(Comparable a[]) {
+        buildHeap(a);
+
+        for (int i = 1; i < a.length; i++) {
+            swap(a, 0, a.length - i);
+            heapify(a, a.length - i, 0);
+        }
+    }
+
+    /**
      * Builds a heap from the given array.
      * Calls heapify for last parent node the tree up to the root.
      * @param a array to be converted
      */
     public static void buildHeap(int a[]) {
+        for (int i = parent(a.length - 1); -1 < i; i--) {
+            heapify(a, a.length, i);
+        }
+    }
+
+    /**
+     * Builds a heap from the given array.
+     * Calls heapify for last parent node the tree up to the root.
+     * @param a array to be converted
+     */
+    public static void buildHeap(Comparable a[]) {
         for (int i = parent(a.length - 1); -1 < i; i--) {
             heapify(a, a.length, i);
         }
@@ -56,6 +80,33 @@ public class Heapsort {
         }
 
         if (l == (len - 1) && a[i] < a[l])
+            swap(a, i, l);
+    }
+    /**
+     * Heapifies the given array.
+     * @param a array to heapify
+     * @param len heapify only elements that are less than len
+     * @param i start node
+     */
+    public static void heapify(Comparable a[], int len, int i) {
+        if (i < 0) return;
+ 
+        int l = (2 * i + 1);
+        int r = l + 1;
+        int greater;
+
+        if (r < len) { // We have both children.
+            // greater = (a[l] < a[r]) ? r : l;
+            greater = (a[l].compareTo(a[r]) < 0) ? r : l;
+ 
+            // Compare if i needs to be swapped.
+            if (a[i].compareTo(a[greater]) < 0) {
+                swap(a, i, greater);
+                heapify(a, len, greater);
+            }
+        }
+
+        if (l == (len - 1) && (a[i].compareTo(a[l]) < 0))
             swap(a, i, l);
     }
  
