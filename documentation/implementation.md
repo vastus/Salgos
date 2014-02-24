@@ -76,17 +76,15 @@ to two equal sized (or n/2 and n/2, n/2 + 1 depending if even or odd) arrays.
 Then the merging part begins, where each element of the both arrays is merged
 into one by taking the element which is the lowest of the two arrays.
 
-A small example demonstration of merge sort applied to <code>[5, 1, 7]</code>
+An example demonstration of merge sort applied to <code>[5, 1, 7]</code>:
 
 <code>
-<pre>
 [5, 7, 1]  # Divide.
 [5] [7, 1] # Here 5 is sorted. Divide [7, 1]
 [7] [1]    # Merge these two into one array by lowest element.
 [1, 7]     # The results. Return and Recur.
 [5] [1, 7] # Merge by lowest.
 [1, 5, 7]  # Sorted.
-</pre>
 </code>
 
 ### Pseudo code
