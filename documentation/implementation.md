@@ -80,10 +80,15 @@ An example demonstration of merge sort applied to <code>[5, 1, 7]</code>:
 
 <code>
 [5, 7, 1]  # Divide.
+
 [5] [7, 1] # Here 5 is sorted. Divide [7, 1]
+
 [7] [1]    # Merge these two into one array by lowest element.
+
 [1, 7]     # The results. Return and Recur.
+
 [5] [1, 7] # Merge by lowest.
+
 [1, 5, 7]  # Sorted.
 </code>
 
